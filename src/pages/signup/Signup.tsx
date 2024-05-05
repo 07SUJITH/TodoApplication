@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
 import { isValidEmail, isValidPassword, isValidUsername } from "../../utils/regexMatcher.js";
-import "./Signup.css";
+import styles from "./Signup.module.css";
 import { useLocalStorage } from "../../hooks/useLocalStorage.js";
 
 const Signup: React.FC = () => {
@@ -91,62 +91,60 @@ const Signup: React.FC = () => {
   };
 
   return (
-    <div className="animated-background">
-
-    <div className="container">
-    <form
-      onSubmit={onFormSubmit}
-      noValidate
-    >
-      <h1>SignUp</h1>
-      <div className="input_box">
-        <label htmlFor="email">Email</label>
-        <input
-          onChange={handleUserInputs}
-          type="email"
-          placeholder="Enter your email"
-          id="email"
-          name="email"
-          value={signupDetails.email}
-          ref={emailRef}
-        />
+    <div className={styles.animatedBackground}>
+      <div className={styles.container}>
+        <form onSubmit={onFormSubmit} noValidate>
+          <h1 className={styles.h1}>SignUp</h1>
+          <div className={styles.inputBox}>
+            <label className={styles.label} htmlFor="email">Email</label>
+            <input
+              onChange={handleUserInputs}
+              className={styles.inputEmail}
+              type="email"
+              placeholder="Enter your email"
+              id="email"
+              name="email"
+              value={signupDetails.email}
+              ref={emailRef}
+            />
+          </div>
+          <div className={styles.inputBox}>
+            <label className={styles.label} htmlFor="username">Username</label>
+            <input
+              onChange={handleUserInputs}
+              className={styles.inputText}
+              type="text"
+              placeholder="Enter username"
+              id="username"
+              name="username"
+              value={signupDetails.username}
+            />
+          </div>
+          <div className={styles.inputBox}>
+            <label className={styles.label} htmlFor="password">Password</label>
+            <input
+              onChange={handleUserInputs}
+              className={styles.inputPassword}
+              type="password"
+              placeholder="Enter your password"
+              id="password"
+              name="password"
+              value={signupDetails.password}
+            />
+          </div>
+          <button className={styles.button}>
+            {loading ?
+              <div className={styles.spinner}></div>
+              : "Create account"
+            }
+          </button>
+          <p className={styles.p}>
+            already have an account?{" "}
+            <Link className={styles.a} to="/login">Login</Link>
+          </p>
+        </form>
       </div>
-      <div className="input_box">
-        <label htmlFor="username">Username</label>
-        <input
-          onChange={handleUserInputs}
-          type="text"
-          placeholder="Enter username"
-          id="username"
-          name="username"
-          value={signupDetails.username}
-        />
-      </div>
-      <div className="input_box">
-        <label htmlFor="password">Password</label>
-        <input
-          onChange={handleUserInputs}
-          type="password"
-          placeholder="Enter your password"
-          id="password"
-          name="password"
-          value={signupDetails.password}
-        />
-      </div>
-      <button>
-        {loading?
-          <div className="spinner"></div>
-          : "Create account"
-        }
-      </button>
-      <p>
-        already have an account?{" "}
-        <Link to="/login">Login</Link>
-      </p>
-    </form>
-  </div>
     </div>
-    
   );
 };
 

@@ -1,4 +1,4 @@
-.animated-background {
+.animatedBackground {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
@@ -23,9 +23,6 @@
         background-position: 50% 50%;
     }
 }
-
-
-
 
 @media (max-width: 600px) {
     .container {
@@ -59,40 +56,40 @@
     z-index: 1;
 }
 
-h1 {
+.h1 {
     text-align: center;
     color: #333;
     margin-bottom: 20px;
 }
 
-label {
+.label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
 }
 
-input[type="email"],
-input[type="text"],
-input[type="password"] {
+.inputEmail,
+.inputText,
+.inputPassword {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
- 
     border: 1px solid #ccc;
     border-radius: 4px;
     outline: none;
 }
-.input_box{
-   padding-right: 20px;
+
+.inputBox {
+    padding-right: 20px;
 }
 
-input[type="email"]:focus,
-input[type="text"]:focus,
-input[type="password"]:focus {
+.inputEmail:focus,
+.inputText:focus,
+.inputPassword:focus {
     border-color: #007bff;
 }
 
-button {
+.button {
     width: 100%;
     padding: 10px;
     background-color: #3f77b7;
@@ -102,21 +99,21 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.button:hover {
     background-color: #0056b3;
 }
 
-p {
+.p {
     text-align: center;
     margin-top: 20px;
 }
 
-a {
+.a {
     color: #007bff;
     text-decoration: none;
 }
 
-a:hover {
+.a:hover {
     text-decoration: underline;
 }
 
@@ -129,7 +126,7 @@ a:hover {
     animation: spin 1s linear infinite;
     margin: auto;
 }
-  
+
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
