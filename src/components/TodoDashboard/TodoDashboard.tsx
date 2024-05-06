@@ -5,11 +5,7 @@ import { BsBoxArrowInDown } from "react-icons/bs";
 import TodoBox from '../TodoBox/TodoBox';
 
 const TodoDashboard: React.FC = () => {
-    const [todos, setTodos] = useState([
-        { todo_id: 1, title: 'Todo 1', isCompleted: false },
-        { todo_id: 2, title: 'Todo 2', isCompleted: true },
-     
-    ]);
+    const [todos, setTodos] = useState<Array<{ todo_id: number, title: string, isCompleted: boolean }>>([]);
     const [category, setCategory] = useState('all');
     const [itemLeft, setItemLeft] = useState(0);
     useEffect(() => {
@@ -54,7 +50,7 @@ const TodoDashboard: React.FC = () => {
     };
     const handleAddTodo = () => {
         if (newTodo.trim() !== '') {
-            setTodos([...todos, {todo_id:todo_id_helper,title:newTodo,isCompletd: false}]);
+            setTodos([...todos, {todo_id:todo_id_helper,title:newTodo,isCompleted: false}]);
             setNewTodo('');
             todo_id_helper += 1;
         }
