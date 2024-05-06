@@ -1,0 +1,54 @@
+.card {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid rgb(33, 33, 33);
+}
+
+.circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.circle:hover {
+    background-color: #e6e6e6;
+}
+
+.tick {
+    font-size: 18px;
+    color: #00cc00;
+}
+
+.title {
+    flex-grow: 1;
+    font-size: 16px;
+    color: #333;
+}
+
+.titleCompleted {
+    flex-grow: 1;
+    font-size: 16px;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.deleteIcon {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.deleteIcon :hover{
+    color: #cc0000;
+
+}
