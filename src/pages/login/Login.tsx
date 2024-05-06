@@ -15,7 +15,10 @@ const Signup: React.FC = () => {
     username: "",
     password: "",
   });
-
+  interface User {
+    username: string;
+    password: string;
+   }
   const emailRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
