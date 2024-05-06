@@ -5,7 +5,7 @@ import { BsBoxArrowInDown } from "react-icons/bs";
 import TodoBox from '../TodoBox/TodoBox';
 
 const TodoDashboard: React.FC = () => {
-    const [todos, setTodos] = useState<Todo[]>([
+    const [todos, setTodos] = useState([
         { todo_id: 1, title: 'Todo 1', isCompleted: false },
         { todo_id: 2, title: 'Todo 2', isCompleted: true },
      
